@@ -1,0 +1,230 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 15800798283,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "User make a purchase with 2 item",
+        "description": "",
+        "id": "sales-flow;user-make-a-purchase-with-2-item",
+        "after": [
+          {
+            "result": {
+              "duration": 162477325,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 228449358,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User open the website sauce demo",
+            "match": {
+              "location": "LoginSteps.verifyLogin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 410209921,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User input \"standard_user\" as userName and input \"secret_sauce\" as pass",
+            "match": {
+              "arguments": [
+                {
+                  "val": "standard_user",
+                  "offset": 12
+                },
+                {
+                  "val": "secret_sauce",
+                  "offset": 50
+                }
+              ],
+              "location": "LoginSteps.inputCredential(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3067093895,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User already on landing page",
+            "match": {
+              "location": "PurchaseSteps.verifyLandingPage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3124322738,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User Product list by \"Name (Z to A)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Name (Z to A)",
+                  "offset": 22
+                }
+              ],
+              "location": "PurchaseSteps.sortProductValue(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4176093279,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User choice 2 product from the list",
+            "match": {
+              "location": "PurchaseSteps.choiceProduct()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4097713998,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User click Cart",
+            "match": {
+              "location": "PurchaseSteps.iconCart()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4064642309,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "User remove T-Shirt Red",
+            "match": {
+              "location": "PurchaseSteps.removeCart()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4071972368,
+              "status": "passed"
+            },
+            "comments": [
+              {
+                "line": 13,
+                "value": "# Check Out"
+              }
+            ],
+            "line": 14,
+            "name": "User Click Check Out",
+            "match": {
+              "location": "PurchaseSteps.Checkout()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6298966769,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "User input First Name \"Abdi\" and LastName \"Firman\" and postal code \"1234\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Abdi",
+                  "offset": 23
+                },
+                {
+                  "val": "Firman",
+                  "offset": 43
+                },
+                {
+                  "val": "1234",
+                  "offset": 68
+                }
+              ],
+              "location": "PurchaseSteps.checkOutInformation(String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4127891147,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "User click Continue",
+            "match": {
+              "location": "PurchaseSteps.continueCart()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5133887514,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Total must be match between expect and actual",
+            "match": {
+              "location": "PurchaseSteps.verifyLanding()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5086812478,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "User click Finish and landing to page THANK YOU FOR YOUR ORDER",
+            "match": {
+              "location": "PurchaseSteps.finishCart()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Sales flow",
+    "description": "description Class",
+    "id": "sales-flow",
+    "keyword": "Feature",
+    "uri": "features/Sales.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@Sales"
+      }
+    ]
+  }
+]
